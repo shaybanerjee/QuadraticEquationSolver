@@ -6,7 +6,13 @@ namespace QuadSolver
 {
     class Solver
     {
-
+        /// <summary>
+        /// Method that gets the root of quadratic equation provided as an argument 
+        /// if applicable
+        /// </summary>
+        /// <param name="eq">
+        /// quadratic equation
+        /// </param>
         public static void SolveExp(string eq)
         {
             if (eq == "")
@@ -249,7 +255,22 @@ namespace QuadSolver
         }
 
 
-
+        /// <summary>
+        /// method that retrieves the roots
+        /// </summary>
+        /// <param name="a">
+        /// Represents the first number in a quadratic equation
+        /// </param>
+        /// <param name="b">
+        /// Represents the second number in a quadratic equation
+        /// </param>
+        /// <param name="c">
+        /// Represents the third number in a quadratic equation
+        /// </param>
+        /// <param name="disc">
+        /// Represents the discremenant of a quadratic equations
+        /// </param>
+        /// <returns></returns>
         public static Root quad_form(int a, int b, int c, int disc)
         {
 
@@ -258,6 +279,16 @@ namespace QuadSolver
             return new Root(root1, root2);
 
         }
+        /// <summary>
+        /// Method that retrieves a fraction representation of the roots
+        /// </summary>
+        /// <param name="val">
+        /// root in decimal format
+        /// </param>
+        /// <param name="acc">
+        /// Represents a desired accuracy
+        /// </param>
+        /// <returns></returns>
         public static Fraction GetFrac(double val, double acc)
         {
             var sign = Math.Sign(val);
@@ -302,7 +333,9 @@ namespace QuadSolver
                 }
             }
         }
-
+        /// <summary>
+        /// Structure representing a root
+        /// </summary>
         public struct Root
         {
             public Root(double r1, double r2)
@@ -313,7 +346,9 @@ namespace QuadSolver
             public double Root1 { get; private set; }
             public double Root2 { get; private set; }
         }
-
+        /// <summary>
+        /// Structure representing a fraction
+        /// </summary>
         public struct Fraction
         {
             public Fraction(int n, int d)
