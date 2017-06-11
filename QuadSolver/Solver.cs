@@ -26,7 +26,7 @@ namespace QuadSolver
                     {
                         isHat = true;
                     }
-                    else if (isHat)
+                    if (isHat)
                     {
                         isHat = false;
                     }
